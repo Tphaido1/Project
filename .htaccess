@@ -1,0 +1,6 @@
+RewriteEngine On
+# xoa tien to public
+RewriteCond %{REQUEST_URI} !/public
+RewriteRule ^(.*)$ public/$1 [L]
+# viet lai duong dan trang admin
+RewriteRule "admin" "?controller=Admin&action=index"
