@@ -1,0 +1,101 @@
+.cta {
+  padding: 10rem 4rem;
+  text-align: center;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(196, 80, 42, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rust);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 3rem;
+}
+
+.ctaTitle em {
+  font-style: italic;
+  color: var(--rust);
+}
+
+.email {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.75rem);
+  font-style: italic;
+  color: var(--ink);
+  border-bottom: 2px solid var(--rust);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.email:hover {
+  color: var(--rust);
+}
+
+.footer {
+  padding: 2rem 4rem;
+  border-top: 1px solid var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.copy {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socials a {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.socials a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 6rem 1.5rem;
+  }
+  .footer {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
